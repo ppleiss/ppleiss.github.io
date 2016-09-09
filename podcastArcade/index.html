@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Podcast Arcade</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -8,14 +9,12 @@
         <style>
             body {
                 margin: 0;
-                background: url("images/background1300.jpg") no-repeat;
-                background-size: 100%; /* To fix light in center */
+                /*background: url("images/background1300.jpg") no-repeat;
+                background-size: 100%; To fix light in center */
                 background-color: #161616;
-             }
-           
-            p {
                 font-family: 'Nunito', sans-serif;
                 color: white;
+                text-shadow: 2px 2px 8px #FED417;
             }
             #intro {
                 display: block;
@@ -26,7 +25,7 @@
                 margin: 0 auto;
                 margin-top: 6vh;
                 padding: 5vh 0 8vh 0;
-           }
+            }
             #title{
                 display: block;
                 width: 20vw;
@@ -41,20 +40,24 @@
                 /*margin-left: 5vw;*/
                 width: 100%;
             }
-            
-            .machine{
+            .container{
                 display: block;
                 flex-grow: 1;
-                max-width: 100%;
-                height: auto; 
             }
-            
+            .machine{
+                max-width: 100%;
+                height: auto;
+                display: block;
+                flex-grow: 1;
+            }
             #copyright{
-                padding: 5px 5px 20px 50px;
+                display: block;
+                text-align: center;
+                padding-top: 35px;
             }
             a:hover {
                 position: relative;
-                }
+            }
             a:hover:after {
                 content: url(images/token.PNG); 
                 width: 20px;
@@ -63,90 +66,91 @@
                 left: 60px; 
                 top: -100px;
             }
-          
-/*-------------------------------------------------------------------------------------*/            
-            /*Large Phone */
-            @media only screen and (min-width: 414px) and (max-width: 768px){
-                #intro{
-                    display: block;
-                    text-align: center;
-                    font-size: 2vh;
-                    margin-top: 12vh;
-                    margin-left: 15vw;
-                    width: 70vw;
-                    }
-                 body{
-                    background: url("images/background-large.jpg") no-repeat;
-                    background-size: 100%; /* To fix light in center */
-                    background-color: #161616;
-                    }
-                #title{
-                    width:150px;
-                    text-align: center;
-                    margin-top: -80px;
-                    margin-left: 32vw;
-                    }
-                .machine{
-                    display: block;
-                    flex-grow: 1;
-                    max-width: 100%;
-                    height: auto; 
-                }
-                }
-/*-------------------------------------------------------------------------------------*/            
-            /*Medium Phone */
-            @media only screen and (min-width: 375px) and (max-width: 413px){
-                
-                body {  background: url("images/background-med.jpg") no-repeat;
-                        background-size: 100%; /* To fix light in center */
-                        background-color: #161616;}
-                
-                #intro{
-                        display: inline-block;
-                        text-align: center;
-                        font-size: 2vh;
-                        margin: 15vh;}
-                .machine{
-                display: block;
-                flex-grow: 1;
-                max-width: 100%;
-                height: auto; 
-            }
-                
-            }
-                    
-                    
-/*-------------------------------------------------------------------------------------*/          
-           /*Small Phone */
-        @media only screen and (min-width: 320px) and (max-width: 374px) 
-        {
-            body { background: url("images/background-sm.jpg") no-repeat;
-                    background-size: 100%; /* To fix light in center */
-                    background-color: #161616;}
-            #intro { display: inline-block;
-                    text-align: center;
-                    font-size: 2vh;
-                    margin: 15vh;
-                    }
-            
-        }
 
-       </style>
+
+/*--------------------------------------- Large Phone -------------------------------------------------------*/
+            @media only screen and (min-width: 414px) and (max-width: 768px){
+                body{
+                    /* background: url("images/background-large.jpg") no-repeat;
+                    background-size: 100%; */
+                }
+                #intro { 
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                    width: 75vw;
+                    font-size: 3vh;
+                }
+                #title{
+                    display: block;
+                    width: 30vw;
+                    margin-top: -35px;
+                    padding-bottom: 4vh; /*space between title & machines*/
+                }
+                #copyright {
+                    font-size: 2vh;
+                }
+            }
+/*--------------------------------------- Medium Phone -------------------------------------------------------*/
+            @media only screen and (min-width: 375px) and (max-width: 414px){
+                body {  /* background: url("images/background-med.jpg") no-repeat;
+                    background-size: 100%; */ 
+                }
+                #intro { 
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                    width: 75vw;
+                    font-size: 3vh;
+                }
+                #title{
+                    display: block;
+                    width: 40vw;
+                    margin-top: -35px;
+                    padding-bottom: 4vh; /*space between title & machines*/
+                }
+                #copyright {
+                    font-size: 2vh;
+                }
+            }        
+/*--------------------------------------- Small Phone -------------------------------------------------------*/
+            @media only screen and (min-width: 319px) and (max-width: 374px) {
+                body { 
+                    /*background: url("images/background-sm.jpg") no-repeat;
+                    background-size: 100%;*/
+                }
+                #intro { display: block;
+                    margin: auto;
+                    text-align: center;
+                    width: 75vw;
+                    font-size: 3vh;
+                }
+                #title {
+                    display: block;
+                    width: 50vw;
+                    margin-top: -35px;
+                    padding-bottom: 4vh; /*space between title & machines*/
+                }
+                #copyright {
+                    font-size: 2vh;
+                    }
+            }
+     </style>
     </head>
     <body>
-        <div>
-            <p id="intro">Behind a secret door in the back of an old video arcade, you find a line of machines that still seem to be functioning!
-            <br/>Time for an adventure . . .
-            </p>
-            <img id="title" src="images/podcastarcade400.png" />
-        </div>
-       <div id="arcadeLine">
-            <div class="machine"><a href="http://www.falconpunchthunderdads.com"><img src="images/falconpunchcrop.png" /></a></div>
-            <div class="machine"><a href="http://www.daydreaminstructionmanual.com"><img src="images/daydreamcrop.png" /></a></div>
-            <div class="machine"><a href="http://www.goadkicker.libsyn.com"><img src="images/goadkicker.png" /></a></div>
-            <div class="machine"><a href="http://www.undergroundinc.info"><img src="images/undergroundcrop.png" /></a></div>
-            <div class="machine"><a href="http://www.geekvice.libsyn.com"><img src="images/geekvicecrop.png" /></a></div>
-            </div>
-        <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>   
+    <div>
+    <div id="intro">Behind a secret door in the back of an old video arcade, you find a line of machines that still seem to be functioning!
+    <br/>Time for an adventure . . .</div>
+
+    <img id="title" src="images/podcastarcade400.png" />
+    </div>
+    <div id="arcadeLine">
+    <div class="machine"><a href="http://www.falconpunchthunderdads.com"><img class = "machine" src="images/falconpunchcrop.png" /></a></div>
+    <div class="container"><a href="http://www.daydreaminstructionmanual.com"><img class = "machine" src="images/daydreamcrop.png" /></a></div>
+    <div class="container"><a href="http://www.goadkicker.libsyn.com"><img class = "machine" src="images/goadkicker.png" /></a></div>
+    <div class="container"><a href="http://www.undergroundinc.info"><img class = "machine" src="images/undergroundcrop.png" /></a></div>
+    <div class="container"><a href="http://www.geekvice.libsyn.com"><img class = "machine" src="images/geekvicecrop.png" /></a></div>
+    </div>
+    <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>   
     </body>
 </html>
