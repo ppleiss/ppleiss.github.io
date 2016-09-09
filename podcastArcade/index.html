@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Podcast Arcade</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <style>
+            body {
+                margin: 0;
+                background: url("images/background.jpg") no-repeat;
+                background-size: 100%; /* To fix light in center */
+                background-color: #161616;
+             }
+           
+            p {
+                font-family: 'Nunito', sans-serif;
+                color: white;
+            }
+            #intro {
+                display: block;
+                text-align: center;
+                width: 60vw;
+                font-size: 4vh;
+                font-style: italic;
+                margin: 0 auto;
+                margin-top: 6vh;
+                padding: 5vh 0 8vh 0;
+           }
+            #title{
+                display: block;
+                width: 20vw;
+                margin-top: 2vh;
+                margin: 0 auto;
+                padding-bottom: 8vh; /*space between title & machines*/
+            }
+            #arcadeLine{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /*margin-left: 5vw;*/
+                width: 100%;
+            }
+            
+            .machine{
+                display: block;
+                flex-grow: 1;
+                max-width: 100%;
+                height: auto; 
+            }
+            
+            #copyright{
+                padding: 5px 5px 20px 50px;
+            }
+            a:hover {
+                position: relative;
+                }
+            a:hover:after {
+                content: url(images/token.PNG); 
+                width: 20px;
+                display: block;
+                position: absolute;
+                left: 60px; 
+                top: -100px;
+            }
+          
+/*-------------------------------------------------------------------------------------*/            
+            /*Large Phone */
+            @media only screen and (min-width: 414px) and (max-width: 768px){
+                #intro{
+                    display: block;
+                    text-align: center;
+                    font-size: 2vh;
+                    margin-top: 12vh;
+                    margin-left: 15vw;
+                    width: 70vw;
+                    }
+                 body{
+                    background: url("images/background-large.jpg") no-repeat;
+                    background-size: 100%; /* To fix light in center */
+                    background-color: #161616;
+                    }
+                #title{
+                    width:150px;
+                    text-align: center;
+                    margin-top: -80px;
+                    margin-left: 32vw;
+                    }
+                .machine{
+                    display: block;
+                    flex-grow: 1;
+                    max-width: 100%;
+                    height: auto; 
+                }
+                }
+/*-------------------------------------------------------------------------------------*/            
+            /*Medium Phone */
+            @media only screen and (min-width: 375px) and (max-width: 413px){
+                
+                body {  background: url("images/background-med.jpg") no-repeat;
+                        background-size: 100%; /* To fix light in center */
+                        background-color: #161616;}
+                
+                #intro{
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 2vh;
+                        margin: 15vh;}
+                .machine{
+                display: block;
+                flex-grow: 1;
+                max-width: 100%;
+                height: auto; 
+            }
+                
+            }
+                    
+                    
+/*-------------------------------------------------------------------------------------*/          
+           /*Small Phone */
+        @media only screen and (min-width: 320px) and (max-width: 374px) 
+        {
+            body { background: url("images/background-sm.jpg") no-repeat;
+                    background-size: 100%; /* To fix light in center */
+                    background-color: #161616;}
+            #intro { display: inline-block;
+                    text-align: center;
+                    font-size: 2vh;
+                    margin: 15vh;
+                    }
+            
+        }
 
+       </style>
+    </head>
+    <body>
+        <div>
+            <p id="intro">Behind a secret door in the back of an old video arcade, you find a line of machines that still seem to be functioning!
+            <br/>Time for an adventure . . .
+            </p>
+            <img id="title" src="images/podcastarcade400.png" />
+        </div>
+       <div id="arcadeLine">
+            <div class="machine"><a href="http://www.falconpunchthunderdads.com"><img src="images/falconpunchcrop.png" /></a></div>
+            <div class="machine"><a href="http://www.daydreaminstructionmanual.com"><img src="images/daydreamcrop.png" /></a></div>
+            <div class="machine"><a href="http://www.goadkicker.libsyn.com"><img src="images/goadkicker.png" /></a></div>
+            <div class="machine"><a href="http://www.undergroundinc.info"><img src="images/undergroundcrop.png" /></a></div>
+            <div class="machine"><a href="http://www.geekvice.libsyn.com"><img src="images/geekvicecrop.png" /></a></div>
+            </div>
+        <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>   
+    </body>
+</html>
