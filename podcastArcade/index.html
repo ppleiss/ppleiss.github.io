@@ -55,16 +55,23 @@
                 text-align: center;
                 padding-top: 35px;
             }
+            .token{
+                height: 4vh;
+                z-index: 1;
+                margin-top: -8vh;
+                position: absolute;
+                
+            }
             a:hover {
                 position: relative;
             }
             a:hover:after {
-                content: url(images/token.PNG); 
-                width: 20px;
-                display: block;
-                position: absolute;
-                left: 60px; 
-                top: -100px;
+            }
+            #facebook{
+                float:right;
+                width: 80%;
+                text-align: right;
+                margin-right: 5vw;
             }
 
 
@@ -95,7 +102,7 @@
 /*--------------------------------------- Medium Phone -------------------------------------------------------*/
             @media only screen and (min-width: 375px) and (max-width: 414px){
                 body {  background: url("images/backgroundMed.jpg") no-repeat;
-                    background-size: 100% 100%; 
+                    background: min-height: 100%;
                     background-color: black;
                 }
                 #intro { 
@@ -120,7 +127,7 @@
             @media only screen and (min-width: 319px) and (max-width: 374px) {
                 body { 
                     background: url("images/backgroundSm.jpg") no-repeat;
-                    background-size: 100% 100%;
+                    background: min-height: 100%;
                     background-color: black;
                 }
                 #intro { display: block;
@@ -140,6 +147,18 @@
                 #copyright {
                     font-size: 2vh;
                     }
+                .token a {
+                      width: 48px;
+                      height: 48px;
+                      position: absolute;
+                      left: 12px;
+                      top: 12px;
+                      border-radius: 500px;
+                      display: block;
+                    }
+                .token:hover a {
+                    background: url(images/token.png);
+                }
             }
      </style>
     </head>
@@ -151,12 +170,13 @@
     <img id="title" src="images/podcastarcade400.png" />
     </div>
     <div id="arcadeLine">
-    <div class="machine"><a href="http://www.falconpunchthunderdads.com"><img class = "machine" src="images/falconpunchcrop.png" /></a></div>
-    <div class="container" class="zoomTarget"><a href="http://www.daydreaminstructionmanual.com"><img class = "machine" src="images/daydreamcrop.png" /></a></div>
-    <div class="container"><a href="http://www.goadkicker.libsyn.com"><img class = "machine" src="images/goadkicker.png" /></a></div>
-    <div class="container"><a href="http://www.undergroundinc.info"><img class = "machine" src="images/undergroundcrop.png" /></a></div>
-    <div class="container"><a href="http://www.geekvice.libsyn.com"><img class = "machine" src="images/geekvicecrop.png" /></a></div>
+            <div class="container"><a href="http://www.falconpunchthunderdads.com"><img class = "machine" src="images/falconpunchcrop.png" /></a></div>
+            <div class="container"><a href="http://www.daydreaminstructionmanual.com"><img class = "machine" src="images/daydreamcrop.png" /></a></div>
+            <div class="container"><a href="http://www.goadkicker.libsyn.com"><img class = "machine" src="images/goadkicker.png" /></a></div>
+            <div class="container"><a href="http://www.undergroundinc.info"><img class = "machine" src="images/undergroundcrop.png" /></a></div>
+            <div class="container"><a href="http://www.geekvice.libsyn.com"><img class = "machine" src="images/geekvicecrop.png" /></a></div>
     </div>
+            <div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png"></a></div>    
     <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p> 
     </body>
 </html>
