@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,8 +10,6 @@
         <style>
             body {
                 margin: 0;
-                background: url("images/backgroundnew.jpg") no-repeat;
-                background-size: 100% 100%; /* To fix light in center */
                 background-color: black;
                 font-family: 'Nunito', sans-serif;
                 color: white;
@@ -19,17 +18,16 @@
             #intro {
                 display: block;
                 text-align: center;
-                width: 60vw;
+                width: 75vw;
                 font-size: 4vh;
                 font-style: italic;
                 margin: 0 auto;
-                margin-top: 30vh;
-                padding: 5vh 0 5vh 0;
+                margin-top: 2vh;
+                padding: 5vh 0 15vh 0;
             }
             #title{
                 display: block;
-                width: 30vw;
-                margin-top: 2vh;
+                width: 20vw;
                 margin: 0 auto;
                 padding-bottom: 8vh; /*space between title & machines*/
             }
@@ -37,7 +35,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                /*margin-left: 5vw;*/
+                margin-left: 4vw;
                 width: 100%;
             }
             .container{
@@ -55,13 +53,7 @@
                 text-align: center;
                 padding-top: 35px;
             }
-            .token{
-                height: 4vh;
-                z-index: 1;
-                margin-top: -8vh;
-                position: absolute;
-                
-            }
+            
             a:hover {
                 position: relative;
             }
@@ -73,96 +65,102 @@
                 text-align: right;
                 margin-right: 5vw;
             }
+            img.bg {
+				  /* Set rules to fill background */
+				  min-height: 100%;
+				  min-width: 1024px;
+
+				  /* Set up proportionate scaling */
+				  width: 100%;
+				  height: auto;
+
+				  /* Set up positioning */
+				  position: fixed;
+				  top: 0;
+				  left: 0;
+					z-index: -1;
+				}
+
+				@media screen and (max-width: 1024px) { /*Specific to this particular image*/
+				  img.bg {
+					left: 50%;
+					margin-left: -512px;   /* 50% */
+				  }
+				} 
 
 
-/*--------------------------------------- Large Phone -------------------------------------------------------*/
+/*--------------------------------------- Large Phone ---------------------------------------------------*/
             @media only screen and (min-width: 414px) and (max-width: 768px){
-                body{
-                    background: url("images/backgroundLg.jpg") no-repeat;
-                    background-size: 100% 100%;
-                    background-color: black;
-                }
                 #intro { 
                     display: block;
                     margin: auto;
                     text-align: center;
                     width: 75vw;
                     font-size: 3vh;
+                    margin-top: 1vh;
                 }
                 #title{
                     display: block;
-                    width: 30vw;
-                    margin-top: -6vh;
+                    width: 25vw;
+                    margin-top: -10vh;
                     padding-bottom: 4vh; /*space between title & machines*/
                 }
-                #copyright {
+                #arcadeLine{
+                	margin-left: 0vw;}
+				#copyright {
                     font-size: 2vh;
                 }
             }
-/*--------------------------------------- Medium Phone -------------------------------------------------------*/
+/*--------------------------------------- Medium Phone --------------------------------------------------*/
             @media only screen and (min-width: 375px) and (max-width: 414px){
-                body {  background: url("images/backgroundMed.jpg") no-repeat;
-                    background: min-height: 100%;
-                    background-color: black;
-                }
                 #intro { 
                     display: block;
                     margin: auto;
                     text-align: center;
                     width: 75vw;
-                    font-size: 2vh;
+                    font-size: 3vh;
                     margin-top: -3vh;
-                }
+					padding-bottom: 5vh;
+					 }
                 #title{
                     display: block;
                     width: 30vw;
-                    margin-top: -2vh;
                     padding-bottom: 4vh; /*space between title & machines*/
                 }
+				#arcadeLine{
+                	margin-left: 0vw;}
                 #copyright {
                     font-size: 2vh;
                 }
             }        
-/*--------------------------------------- Small Phone -------------------------------------------------------*/
+/*--------------------------------------- Small Phone ----------------------------------------------------*/
             @media only screen and (min-width: 319px) and (max-width: 374px) {
-                body { 
-                    background: url("images/backgroundSm.jpg") no-repeat;
-                    background: min-height: 100%;
-                    background-color: black;
-                }
                 #intro { display: block;
                     margin: auto;
                     text-align: center;
-                    width: 95vw;
+                    width: 80vw;
                     font-size: 2vh;
-                    margin-top: -4vh;
-                    padding-bottom: 10vh;
+                    margin-top: 2vh;
+                    padding-bottom: 15vh;
+                    margin-right: 15vw;
                 }
                 #title {
                     display: block;
                     width: 30vw;
-                    margin-top: -6vh;
+                    margin-top: -4vh;
                     padding-bottom: 4vh; /*space between title & machines*/
                 }
-                #copyright {
-                    font-size: 2vh;
-                    }
-                .token a {
-                      width: 48px;
-                      height: 48px;
-                      position: absolute;
-                      left: 12px;
-                      top: 12px;
-                      border-radius: 500px;
-                      display: block;
-                    }
-                .token:hover a {
-                    background: url(images/token.png);
-                }
+                
+                #arcadeLine{
+                	margin-left: 0vw;}
             }
+			#copyright {
+                    font-size: 2vh;
+                }
      </style>
     </head>
     <body>
+    <img src="images/bg.jpg" class="bg">
     <div>
     <div id="intro">Behind a secret door in the back of an old video arcade, you find a line of machines that still seem to be functioning!
     <br/>Time for an adventure . . .</div>
