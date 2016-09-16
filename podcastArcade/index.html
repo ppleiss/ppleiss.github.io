@@ -5,159 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Podcast Arcade</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link href="css/standard.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <style>
-            body {
-                margin: 0;
-                background-color: black;
-                font-family: 'Nunito', sans-serif;
-                color: white;
-                text-shadow: 2px 2px 8px #FED417;
-            }
-            #intro {
-                display: block;
-                text-align: center;
-                width: 75vw;
-                font-size: 4vh;
-                font-style: italic;
-                margin: 0 auto;
-                margin-top: 2vh;
-                padding: 5vh 0 15vh 0;
-            }
-            #title{
-                display: block;
-                width: 20vw;
-                margin: 0 auto;
-                padding-bottom: 8vh; /*space between title & machines*/
-            }
-            #arcadeLine{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-left: 4vw;
-                width: 100%;
-            }
-            .container{
-                display: block;
-                flex-grow: 1;
-            }
-            .machine{
-                max-width: 100%;
-                height: auto;
-                display: block;
-                flex-grow: 1;
-            }
-            #copyright{
-                display: block;
-                text-align: center;
-                padding-top: 35px;
-            }
-            
-            a:hover {
-                position: relative;
-            }
-            a:hover:after {
-            }
-            #facebook{
-                float:right;
-                width: 80%;
-                text-align: right;
-                margin-right: 5vw;
-            }
-            img.bg {
-				  /* Set rules to fill background */
-				  min-height: 100%;
-				  min-width: 1024px;
-
-				  /* Set up proportionate scaling */
-				  width: 100%;
-				  height: auto;
-
-				  /* Set up positioning */
-				  position: fixed;
-				  top: 0;
-				  left: 0;
-					z-index: -1;
-				}
-
-				@media screen and (max-width: 1024px) { /*Specific to this particular image*/
-				  img.bg {
-					left: 50%;
-					margin-left: -512px;   /* 50% */
-				  }
-				} 
-
-
-/*--------------------------------------- Large Phone ---------------------------------------------------*/
-            @media only screen and (min-width: 414px) and (max-width: 768px){
-                #intro { 
-                    display: block;
-                    margin: auto;
-                    text-align: center;
-                    width: 75vw;
-                    font-size: 3vh;
-                    margin-top: 1vh;
-                }
-                #title{
-                    display: block;
-                    width: 25vw;
-                    margin-top: -10vh;
-                    padding-bottom: 4vh; /*space between title & machines*/
-                }
-                #arcadeLine{
-                	margin-left: 0vw;}
-				#copyright {
-                    font-size: 2vh;
-                }
-            }
-/*--------------------------------------- Medium Phone --------------------------------------------------*/
-            @media only screen and (min-width: 375px) and (max-width: 414px){
-                #intro { 
-                    display: block;
-                    margin: auto;
-                    text-align: center;
-                    width: 75vw;
-                    font-size: 3vh;
-                    margin-top: -3vh;
-					padding-bottom: 5vh;
-					 }
-                #title{
-                    display: block;
-                    width: 30vw;
-                    padding-bottom: 4vh; /*space between title & machines*/
-                }
-				#arcadeLine{
-                	margin-left: 0vw;}
-                #copyright {
-                    font-size: 2vh;
-                }
-            }        
-/*--------------------------------------- Small Phone ----------------------------------------------------*/
-            @media only screen and (min-width: 319px) and (max-width: 374px) {
-                #intro { display: block;
-                    margin: auto;
-                    text-align: center;
-                    width: 80vw;
-                    font-size: 2vh;
-                    margin-top: 2vh;
-                    padding-bottom: 15vh;
-                    margin-right: 15vw;
-                }
-                #title {
-                    display: block;
-                    width: 40vw;
-                    margin-top: -4vh;
-                    padding-bottom: 4vh; /*space between title & machines*/
-                }
-                
-                #arcadeLine{
-                	margin-left: 0vw;}
-            }
-			#copyright {
-                    font-size: 2vh;
-                }
-     </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     </head>
     <body>
     <img src="images/bg.jpg" class="bg">
@@ -168,13 +19,26 @@
     <img id="title" src="images/podcastarcade400.png" />
     </div>
     <div id="arcadeLine">
-            <div class="container"><a href="http://www.falconpunchthunderdads.com"><img class = "machine" src="images/falconpunchcrop.png" /></a></div>
-            <div class="container"><a href="http://www.daydreaminstructionmanual.com"><img class = "machine" src="images/daydreamcrop.png" /></a></div>
-            <div class="container"><a href="http://www.goadkicker.libsyn.com"><img class = "machine" src="images/goadkicker.png" /></a></div>
-            <div class="container"><a href="http://www.undergroundinc.info"><img class = "machine" src="images/undergroundcrop.png" /></a></div>
-            <div class="container"><a href="http://www.geekvice.libsyn.com"><img class = "machine" src="images/geekVice.png" /></a></div>
+            <div class="container"><a href="http://www.falconpunchthunderdads.com">
+				<img class = "machine" src="images/falconpunchcrop.png" /><img src="images/token.png" class="token" /></a>
+			</div>
+            <div class="container"><a href="http://www.daydreaminstructionmanual.com">
+				<img class = "machine" src="images/daydreamcrop.png" /><img src="images/token.png" class="token" /></a>
+			</div>
+            <div class="container"><a href="http://www.goadkicker.libsyn.com">
+				<img class = "machine" src="images/goadkicker.png" /><img src="images/token.png" class="token" /></a>
+			</div>
+            <div class="container"><a href="http://www.undergroundinc.info">
+				<img class = "machine" src="images/undergroundcrop.png" /><img src="images/token.png" class="token" /></a>
+			</div>
+            <div class="container"><a href="http://www.geekvice.libsyn.com">
+				<img class = "machine" src="images/geekVice.png" /><img src="images/token.png" class="token" /></a>
+			</div>
     </div>
             <div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png"></a></div>    
-    <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p> 
+    <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>
+		<script>
+		
+		</script>
     </body>
 </html>
