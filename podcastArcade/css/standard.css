@@ -27,28 +27,30 @@ body {
 	justify-content: center;
 	margin-left: 4vw;
 	width: 100%;
+    position: relative;
 }
 .container{
 	display: block;
 	flex-grow: 1;
+	text-align: center;
 }
 .machine{
 	max-width: 100%;
 	height: auto;
 	display: inline-block;
 	flex-grow: 1;
-	}
+    
+}
 
 .token {
 	display: none;
-	margin: 0 auto;
+	position: absolute;
 	height:4vh;
-	/*margin-top: -10vh;
-	margin-left: 8vw;*/
+	z-index: 1;
+	transition: all 0.25s;
+    top: 75%;
 }
-a:hover img{
-	display: block;
-}
+
 #copyright{
 	display: block;
 	text-align: center;
