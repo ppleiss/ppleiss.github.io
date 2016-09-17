@@ -15,30 +15,49 @@
     <div>
     <div id="intro">Behind a secret door in the back of an old video arcade, you find a line of machines that still seem to be functioning!
     <br/>Time for an adventure . . .</div>
-
-    <img id="title" src="images/podcastarcade400.png" />
+	 <img id="title" src="images/podcastarcade400.png" />
     </div>
-    <div id="arcadeLine">
-            <div class="container"><a href="http://www.falconpunchthunderdads.com">
-				<img class = "machine" src="images/falconpunchcrop.png" /><img src="images/token.png" class="token" /></a>
-			</div>
-            <div class="container"><a href="http://www.daydreaminstructionmanual.com">
-				<img class = "machine" src="images/daydreamcrop.png" /><img src="images/token.png" class="token" /></a>
-			</div>
-            <div class="container"><a href="http://www.goadkicker.libsyn.com">
-				<img class = "machine" src="images/goadkicker.png" /><img src="images/token.png" class="token" /></a>
-			</div>
-            <div class="container"><a href="http://www.undergroundinc.info">
-				<img class = "machine" src="images/undergroundcrop.png" /><img src="images/token.png" class="token" /></a>
-			</div>
-            <div class="container"><a href="http://www.geekvice.libsyn.com">
-				<img class = "machine" src="images/geekVice.png" /><img src="images/token.png" class="token" /></a>
-			</div>
-    </div>
-            <div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png"></a></div>    
+	<div id="arcadeLine">
+        <img src="images/token.png" class="token" />
+		<div class="container">
+			<a href="http://www.falconpunchthunderdads.com">
+			<img class = "machine" src="images/falconpunchcrop.png" /></a>
+		</div>
+		<div class="container">
+			<a href="http://www.daydreaminstructionmanual.com">
+			<img class = "machine" src="images/daydreamcrop.png" /></a>
+		</div>
+		<div class="container">
+			<a href="http://www.goadkicker.libsyn.com">
+			<img class = "machine" src="images/goadkicker.png" /></a>
+		</div>
+		<div class="container">
+			<a href="http://www.undergroundinc.info">
+			<img class = "machine" src="images/undergroundcrop.png" /></a>
+		</div>
+		<div class="container">
+			<a href="http://www.geekvice.libsyn.com">
+			<img class = "machine" src="images/geekVice.png" /></a>
+		</div>
+	</div>
+	<div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png"></a></div>    
     <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>
+		
 		<script>
+			$(".machine").mouseenter(function(){
+                var atag = $(this);
+                $(".token").fadeIn(250);
+                var left = atag.position().left;
+                var width = atag.width();
+                var tokenWidth = $(".token").width();
+                var middle = left + width /2 - tokenWidth/2;
+                $(".token").css("left", middle + "px");
+            });
+            $(".machine").mouseleave(function(){
+                $(".token").fadeOut (250);
+            });
+            
 		
 		</script>
-    </body>
+ </body>
 </html>
