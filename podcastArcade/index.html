@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,6 +45,7 @@
     <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>
 		
 		<script>
+//------------------------------------------------Game Token-----------------------------------------------------//			
 			$(".machine").mouseenter(function(){
                 var atag = $(this);
                 $(".token").fadeIn(250);
@@ -56,8 +58,14 @@
             $(".machine").mouseleave(function(){
                 $(".token").fadeOut (250);
             });
-            
-		
+   //----------------------------------------------------------------------------------------------------------//
+			$(".machine").click(function(){
+				$(this).animate({
+					top: '250px',
+					opacity: '0.5',
+					height: '800px'
+				});
+			});
 		</script>
  </body>
 </html>
