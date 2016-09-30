@@ -1,8 +1,9 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="The Podcast Arcade Network, podcasts focusing on comics, movies, fitness, technology, and all things geek culture.">
+        <meta name="keywords" content="Podcast Arcade, Falcon Punch Thunder Dads, Daydream Instruction Manual, Goadkicker, Underground Inc., Geeks Vice, Pop Culture, Comic Books, Graphic Novels, Comicon ">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Podcast Arcade</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,26 +23,26 @@
         <img src="images/token.png" class="token" />
 		<div class="container">
 			<a href="http://www.falconpunchthunderdads.com">
-			<img class = "machine" src="images/falconpunchcrop.png" /></a>
+			<img class = "machine" src="images/falconpunchcrop.png" alt="Falcon Punch Thunder Dads"/></a>
 		</div>
 		<div class="container">
 			<a href="http://www.daydreaminstructionmanual.com">
-			<img class = "machine" src="images/daydreamcrop.png" /></a>
+			<img class = "machine" src="images/daydreamcrop.png" alt="Daydream Instruction Manual"/></a>
 		</div>
 		<div class="container">
 			<a href="http://www.goadkicker.libsyn.com">
-			<img class = "machine" src="images/goadkicker.png" /></a>
+			<img class = "machine" src="images/goadkicker.png" alt="Goadkicker"/></a>
 		</div>
 		<div class="container">
 			<a href="http://www.undergroundinc.info">
-			<img class = "machine" src="images/undergroundcrop.png" /></a>
+			<img class = "machine" src="images/undergroundcrop.png" alt="Underground Inc."/></a>
 		</div>
 		<div class="container">
 			<a href="http://www.geekvice.libsyn.com">
-			<img class = "machine" src="images/geekVice.png" /></a>
+			<img class = "machine" src="images/geekVice.png" alt="Geek Vice"/></a>
 		</div>
 	</div>
-	<div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png"></a></div>    
+	<div id="facebook"><a href="https://www.facebook.com/thepodcastarcade" target="_blank"><img src="images/FB-f-Logo__white.png" alt="Facebook" /></a></div>    
     <p id="copyright">Copyright &copy; 2016 The Podcast Arcade All rights reserved.</p>
 		
 		<script>
@@ -60,12 +61,17 @@
             });
    //----------------------------------------------------------------------------------------------------------//
 			$(".machine").click(function(){
-				$(this).animate({
-					top: '250px',
-					opacity: '0.5',
-					height: '800px'
-				});
-			});
+    $(this).animate({
+        left: '250px',
+		right: '250px',
+        opacity: '0.5',
+        height: '800px'
+    },function(){
+                    setTimeout(function(){
+                        location.href = "http://google.com";
+                    }, 3000);
+                })
+            });
 		</script>
  </body>
 </html>
