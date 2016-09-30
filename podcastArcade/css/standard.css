@@ -41,6 +41,17 @@ body {
 	position: relative;
     
 }
+/* unvisited link */
+a {
+	text-decoration: none;
+    color: #FECB0E;
+	text-shadow: 2px 2px 8px #A43222;
+}
+
+a:hover {
+    color: #00ff00;
+	text-shadow: 2px 2px 8px #4319FF;
+}
 
 .token {
 	display: none;
